@@ -1,7 +1,7 @@
 import tkinter
 import tkinter.messagebox
 import pickle
-
+#testing
 root= tkinter.Tk()
 root.title("Grocery list")
 
@@ -21,35 +21,35 @@ def delete_task():
          tkinter.messagebox.showwarning(title= "Warning!", message="You must select a task")
 
 def load_tasks():
-    tasks= pickle.load(open("tasks.dat","rb"))
+    tasks= pickle.load(open("item_cost.txt")) 
 
 def save_tasks():
     tasks = listbox_task.get(0, listbox_tasks.size())
     listbox_task.delete(0, tkinter.END)
     pickle.dump(tasks, open("tasks.dat", "wb"))
     
-def load_list
+def load_list():
     class main:
-        def _init_(self,item,price)
+        def _init_(self,item,price):
             self.item = item
             self.pruce = price
         with open("item cost.txt","r") as item_cost:
             lines = item_cost.readlines()
             items = []
             
-        for 1 in lines:
-            as_list = 1.split(",")
+        for l in lines:
+            as_list = 1.;split(",")
             cow = main(as_list[0],as_list[1].replace("\n", ""))
             items.append(cow)
             
         for items in items:
             listbox_task.insert(tkinter.END, items.item)
-            listbox_tasks1.insert(tkinter.END, items.price)
+            listbox_task.insert(tkinter.END, items.price)
             
         def mutiple_yview(*args):
-            listbox_tasks .yview(*args)
-            listbox_tasks1 .yview(*args)
-            listbox_tasks2 .yview(*args)
+             listbox_task.yview(*args)
+             listbox_task .yview(*args)
+             listbox_task .yview(*args)
 
 
 # Create GUI
